@@ -1,2 +1,2 @@
 # .dotfiles
-For neovim v0.6.1 and higher
+Personal .dotfiles for most of the tools I use for coding
