@@ -2,7 +2,7 @@
 Personal .dotfiles for most of the tools I use for coding
 
 
-## Setting up Git authentication
+## Setting up Git Authentication
 
 First we need to make sure the dependencies we will be using to create and store the keys are installed.
 
@@ -33,12 +33,12 @@ pass init <userid>
 \*NOTE: If the gpg key generated is not encryptable, a subkey will need to be generated that is
 ```
 gpg --edit-key <userid>
-
+---
 gpg> addKey // go through the setup again and choose an encrypt option
 ```
 
 In the .bashrc file, add
-```
+```bash
 export GCM_CREDENTIALS_STORE="gpg"
 ```
 This will tell gcm what key manager to use
