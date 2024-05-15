@@ -16,7 +16,7 @@ apt install git stow
 ```
 
 We also need to change the naming for some of our system config files.
-```terminal
+```bash
 ~/.bashrc -> ~/.bashrc.bak
 ```
 
