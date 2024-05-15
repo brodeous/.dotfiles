@@ -16,7 +16,8 @@ export PATH
 # Uncomment the following line if you don't like systemctl's auto-paging feature:
 # export SYSTEMD_PAGER=
 
-EDITOR=nvim
+export EDITOR=nvim
+export GCM_CREDENTIAL_STORE="gpg"
 
 # User specific aliases and functions
 if [ -d ~/.bashrc.d ]; then
