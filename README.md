@@ -16,8 +16,8 @@ apt install git stow
 ```
 
 We also need to change the naming for some of our system config files.
-```
-~/.bashrc -> <span style="color:cyan">~/.bashrc.bak</span>
+```terminal
+~/.bashrc -> ~/.bashrc.bak
 ```
 
 We need to do this because stow will create symlinks from the .dotfiles directory to where they need to be starting at the $HOME directory.
