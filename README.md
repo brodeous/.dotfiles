@@ -1,6 +1,8 @@
 # .dotfiles
 Personal .dotfiles for most of the tools I use for coding
 
+Make sure this repository is cloned to the $HOME directory.
+
 ## Initial Dependencies
 
 Before we get started, need to make sure we have git and stow installed.
@@ -17,10 +19,17 @@ apt install git stow
 
 We also need to change the naming for some of our system config files.
 ```bash
-~/.bashrc -> ~/.bashrc.bak
+~/.bashrc >> ~/.bashrc.bak
+```
+We need to do this because stow will create symlinks from the .dotfiles directory to where they need to be starting at the $HOME directory.
+
+Clone this repository to the $HOME directory and cd into the .dotfiles directory.
+Then we run the command.
+```
+stow .
 ```
 
-We need to do this because stow will create symlinks from the .dotfiles directory to where they need to be starting at the $HOME directory.
+After a quick look at the files and we should see the links.
 
 ## Setting up Git Authentication
 
