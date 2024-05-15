@@ -1,17 +1,37 @@
 # .dotfiles
 Personal .dotfiles for most of the tools I use for coding
 
+## Initial Dependencies
+
+Before we get started, need to make sure we have git and stow installed.
+
+- DNF Package Manager
+```
+dnf install git stow
+```
+
+- APT Package Manager
+```
+apt install git stow
+```
+
+We also need to change the naming for some of our system config files.
+```
+~/.bashrc -> <span style="color:cyan">~/.bashrc.bak</span>
+```
+
+We need to do this because stow will create symlinks from the .dotfiles directory to where they need to be starting at the $HOME directory.
 
 ## Setting up Git Authentication
 
 First we need to make sure the dependencies we will be using to create and store the keys are installed.
 
-- DNF package manager
+- DNF Package Manager
 ```
 dnf install gpg pass
 ```
 
-- APT package manager
+- APT Package Manager
 ```
 apt install gpg pass
 ```
@@ -50,4 +70,3 @@ git credential-manager github login
 This will display a pop-up to then login into github. Once logged in, the key will be linked.
 
 After this, upon next `git push`, the passkey to the gpg key will be asked and can be saved to the passkey manager.
-
