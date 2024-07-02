@@ -1,9 +1,16 @@
 return {
+    -- for DAP support
+    { 'dart-lang/dart-vim-plugin' },
+    { 'akinsho/flutter-tools.nvim',
 
-	'akinsho/flutter-tools.nvim',
-
+    lazy = false;
+    dependencies = {
+        'nvim-lua/plenary.nvim',
+        'stevearc/dressing.nvim',
+    },
     config = function()
         require("flutter-tools").setup{
+            flutter_path = "/usr/bin/flutter/bin/flutter",
             ui = {
                 border = "rounded",
                 notification_style = 'plugin',
@@ -68,5 +75,6 @@ return {
 
         vim.keymap.set("n", "<leader>of", "<cmd>Telescope flutter commands<CR>")
     end
+}
 }
 

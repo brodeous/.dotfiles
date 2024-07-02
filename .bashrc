@@ -6,7 +6,7 @@ if [ -f /etc/bashrc ]; then
 fi
 
 # User specific environment
-FLUTTER="/usr/bin/flutter/bin"
+FLUTTER="/usr/bin/flutter"
 PGSQL="/usr/local/pgsql/bin"
 if ! [[ "$PATH" =~ "$HOME/.local/bin:$HOME/bin:" ]]; then
     PATH="$FLUTTER:$PGSQL:$HOME/.local/bin:$HOME/bin:$PATH"
@@ -28,3 +28,5 @@ if [ -d ~/.bashrc.d ]; then
     done
 fi
 unset rc
+
+alias mux=tmuxinator
