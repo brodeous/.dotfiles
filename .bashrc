@@ -6,10 +6,11 @@ if [ -f /etc/bashrc ]; then
 fi
 
 # User specific environment
-FLUTTER="/usr/bin/flutter"
+export FLUTTER="/usr/bin/flutter/bin"
 PGSQL="/usr/local/pgsql/bin"
+POSTMAN="/usr/local/bin/Postman Agent"
 if ! [[ "$PATH" =~ "$HOME/.local/bin:$HOME/bin:" ]]; then
-    PATH="$FLUTTER:$PGSQL:$HOME/.local/bin:$HOME/bin:$PATH"
+    PATH="$FLUTTER:$PGSQL:$POSTMAN:$HOME/.local/bin:$HOME/bin:$PATH"
 fi
 export PATH
 
