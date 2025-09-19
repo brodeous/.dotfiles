@@ -1,0 +1,5 @@
+# Ghostty Config
+
+theme = Arthur
+shell-integration-features = no-cursor,no-sudo,title
+cursor-style = block

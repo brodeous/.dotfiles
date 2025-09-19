@@ -1,14 +1,14 @@
 return {
 
-	'williamboman/mason-lspconfig.nvim',
-
-    config = function()
-        local lsp_zero = require('lsp-zero')
-        require('mason-lspconfig').setup({
-          ensure_installed = {},
-          handlers = {
-            lsp_zero.default_setup,
-          },
-        })
-    end
+	'mason-org/mason-lspconfig.nvim',
+    opts = {
+        ensure_installed = {
+            'lua_ls',
+            'bashls',
+        },
+    },
+    dependencies = {
+        { 'mason-org/mason.nvim', opts={}},
+        'neovim/nvim-lspconfig',
+    },
 }

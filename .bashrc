@@ -6,11 +6,13 @@ if [ -f /etc/bashrc ]; then
 fi
 
 # User specific environment
-export FLUTTER="/usr/bin/flutter/bin"
+export FLUTTER="$HOME/flutter/bin"
+export DART="$HOME/flutter/bin"
 PGSQL="/usr/local/pgsql/bin"
 POSTMAN="/usr/local/bin/Postman Agent"
+ANDROID="$HOME/android-studio/bin"
 if ! [[ "$PATH" =~ "$HOME/.local/bin:$HOME/bin:" ]]; then
-    PATH="$FLUTTER:$PGSQL:$POSTMAN:$HOME/.local/bin:$HOME/bin:$PATH"
+    PATH="$ANDROID:$FLUTTER:$PGSQL:$POSTMAN:$HOME/.local/bin:$HOME/bin:$PATH"
 fi
 export PATH
 
@@ -31,3 +33,4 @@ fi
 unset rc
 
 alias mux=tmuxinator
+PS1="\e[0;36m\W\e[m -> "

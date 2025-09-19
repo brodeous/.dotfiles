@@ -1,7 +1,7 @@
 return {
     -- for DAP support
     { 'dart-lang/dart-vim-plugin' },
-    { 'akinsho/flutter-tools.nvim',
+    { 'nvim-flutter/flutter-tools.nvim',
 
     lazy = false;
     dependencies = {
@@ -10,7 +10,7 @@ return {
     },
     config = function()
         require("flutter-tools").setup{
-            flutter_path = "/usr/bin/flutter/bin/flutter",
+            flutter_path = "/home/noah/flutter/bin/flutter",
             ui = {
                 border = "rounded",
                 notification_style = 'plugin',
